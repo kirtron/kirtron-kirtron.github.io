@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+ <head>
+    <meta charset="UTF-8">
+    <title>Киртрон</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="/scripts/scr_shifr.js"></script>
+    <link rel="stylesheet" href="/styles/style_shif.css">
+    </head>
+   
+<body>
+<div class="as1">
+ <h1>Шифрование</h1>
+ <p>Перед вами сервис для кодирования.</p></div>
+  <div  class="as1"><p> Кодировка - "Цезарь"</p></div>
+    <button id="shifr">Зашифровать</button>
+<button id="deshifr">Дешифровать</button>
+<input id="myIn">
+<input id="myOut">
+<br>
+<div  class="as1"><p> Кодировка - "Сникерс"</p></div>
+<button id="shifrs">Зашифровать</button>
+<button id="deshifrs">Дешифровать</button>
+<input id="myIns">
+<input id="myOuts">
+<br>
+<div  class="as1"><p> Кодировка - "Смена 2-х"</p></div>
+<button id="shifrс">Зашифровать</button>
+<button id="deshifrс">Дешифровать</button>
+<input id="myInс">
+<input id="myOutс">
+<br>
+<div  class="as1"><p> Кодировка - "Сибирский"</p></div>
+
+<button id="deshifrsi">Дешифровать</button>
+<input id="myInsi">
+<input id="myOutsi">
+<br>
+<div  class="as1"><p> Кодировка - "Сибирский Хардъ"</p></div>
+<button id="shifrsh">Зашифровать</button>
+<button id="deshifrsh">Дешифровать</button>
+<input id="myInsh">
+<input id="myOutsh">
+<br>
+<div  class="as1"><p> Кодировка - "Гамма код Элиаса"</p></div>
+<button id="shifra">Зашифровать</button>
+<button id="deshifra">Дешифровать</button>
+<input id="myIna">
+<input id="myOuta">
+<br>
+<div  class="as1"><p> Кодировка - "Помехо-устойчивое кодирование Хемминга 15/11"</p></div>
+<button id="shifrh">Зашифровать</button>
+<button id="deshifrh">Дешифровать</button>
+<input id="myInh">
+<input id="myOuth">
+<br>
+<div  class="as1"><p> Кодировка - "Морзе"</p>
+    <form id="morze" name="morze">
+        
+       <p><input type="radio" name="napravlenie" id="text2morze" tabindex="1" checked=""> <label for="text2morze" title="Русские и латинские буквы можно вводить в любом регистре (и большие и маленькие). Также поддерживаются цифры, знаки пунктуации и специальные символы: . , : ; ( ) ' ” — / ? ! = @ &amp; + _ $">Текст в код Морзе </label><br>
+       
+       <input type="radio" name="napravlenie" id="morze2rus" tabindex="2"> <label for="morze2rus" title="Точки можно вводить вводите символом точки, запятой, плюсом или знаком умножения (. , + *) Тире минусом (дефисом). Буквы разделяйте одним пробелом, а слова - двумя пробелами.">Код Морзе в кириллицу </label><br>
+       
+       <input type="radio" name="napravlenie" id="morze2lat" tabindex="3"> <label for="morze2lat" title="Точки можно вводить вводите символом точки, запятой, плюсом или знаком умножения (. , + *) Тире минусом (дефисом). Буквы разделяйте одним пробелом, а слова - двумя пробелами.">Код Морзе в латиницу </label></p>
+   
+       
+       <textarea  rows="3" cols="62" name="input_text" id="input_text" tabindex="4" autofocus=""></textarea></p>
+       
+       
+       <textarea rows="4" cols="62" name="output_text" id="output_text" tabindex="5" readonly=""></textarea></p>
+       
+       <div><input type="button" value="Конвертировать" tabindex="6" onclick="convert()"></div>
+       </form>
+   
+
+    </body>
+</html> 
+

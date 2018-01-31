@@ -1,0 +1,32 @@
+#gameinfo {
+	font-size: 110%;
+}
+#game table{
+	border:3px groove rgb(255, 136, 0);
+	border-radius:4pt;
+	background-color:#9e9e9e;
+	background-attachment:fixed;
+	background-repeat:repeat;
+}
+#game table tr td{
+	width:6pt;
+	height:6pt;
+	border:1px solid #535353;
+	cursor:pointer;
+}
+#game table tr td.life{
+	border:1px solid #ffd;
+	border-radius:2.4pt;
+	background-color:rgb(173, 255, 148);
+	background-attachment:fixed;
+	background-repeat:repeat;
+}
+#game table tr td:hover{
+	border:1px solid #ee9;
+}
+#game table tr td.life:hover{
+	border:1px solid #e46;
+}
+.whit {
+	color: white
+}

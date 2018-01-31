@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+html {
+    background: url('/files/fond2.jpg');
+    font-family: 'Kelly Slab', cursive;
+    font-size: 1.15rem;
+    background-attachment: fixed
+}
+tr, td {
+    background-color: "#F6EFDD"
+}

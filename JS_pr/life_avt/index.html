@@ -1,0 +1,33 @@
+<html lang="ru">
+<head id="hed">
+	<title>Клеточный автомат "Жизнь"</title>	
+</head>
+<body  marginwidth="0" marginheight="0" onload="initGame();">
+  <td class="content">
+	<div class="infoblock">
+	  <table width="100%"><tr>
+		<td width="50%">
+		</td><td width="50%">
+		<form name="frmGame" action="#">
+		  Размер поля: <input type="text" name="nCells" value="42" title="Число клеток" size="3"> на  <input type="text" name="nCells2" value="26" title="Число клеток" size="3">
+		  <input type="button" value="Новое поле" onclick="clkGameButton();">
+		  <input type="button" id="but" value="Продолжить" onclick="startAndStop();">
+		  <input type="button" value="Случайно" onclick="fillWithRandom();">
+		</form></td>
+	  </tr></table>
+	  <center><div id="game"></div></center>
+	</div>
+	<div class="whit">
+<h1>Клеточный автомат "Жизнь"</h1>
+<p>Данный автомат симулирует развитие клеток и их симбионтов. Данная система работает по 3 законам гинетики:</p>
+<h3>«Отмирание»:</h3>
+<p>Клетка, у которой оказалось четыре и больше соседей, отмирает из-за перенаселенности. Клетка, у которой один сосед или ни одного, отмирает от одиночества.</p>
+
+<h3>«Существование»:</h3>
+<p>Клетка, по соседству с которой расположены две или три клетки, продолжает жить в следующем поколении. </p>
+
+<h3>«Рождение»: </h3>
+<p>Каждая пустая клетка доски, с которой соседствует ровно три клетки (ни больше ни меньше), является рождающей клеткой. При ходе на нее метсте появляется клетка.</p>
+</div>
+</body>
+</html>

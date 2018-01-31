@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+html {
+    font-family: 'Play', sans-serif;
+    background-attachment: fixed
+}
+.pik {
+    display: block;
+    width: 140px;
+    background-color: rgba(90, 219, 129, 0.774);
+    margin: auto;
+    text-align: center;
+    border: solid rgb(61, 151, 83) 2px;
+    margin-bottom: 5px
+}
+nav{
+    left: -180px;
+    top:0;
+    position: fixed;
+    width: 180px;
+    height: 100vh;
+    background-color: white;
+    transition: .5s;
+    background: url('/files/bloc.jpg')
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+
+.buton{
+    position: fixed;
+    top: 20px;
+    transition: .5s;
+}
+
+.left1 {
+    left: 40px
+}
+
+.left2 {
+    left: 220px
+}
+.vis{
+    left: 0;   
+}
+
+ul {
+    margin-left: -40px
+}

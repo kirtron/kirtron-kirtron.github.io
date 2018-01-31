@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Neucha');
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+html {
+    background: url('/files/chat.jpg');
+    font-family: 'Kelly Slab', cursive;
+    font-size: 1.15rem;
+    background-attachment: fixed
+}
+.mess {
+    background-color: rgba(176, 228, 241, 0.836);
+    border: inset 3px blue;
+    width: 30%;
+    margin-top: 10px
+}
+.vniz {
+    margin-top: 50px
+}

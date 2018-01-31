@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+body, button { font-family: 'Play', sans-serif}
+.ass2 {
+    color: white
+}
+.docu {
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.808);
+    border: gray solid 5px
+}

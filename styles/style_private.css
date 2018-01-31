@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Play');
+html {
+    background: url('/files/ДИИКООН.png');
+    font-family: 'Play', sans-serif;
+    background-attachment: fixed
+}
+body, button { 
+    font-family: 'Play', sans-serif
+}
+.shif {
+    background-color: rgba(167, 110, 224, 0.74);
+    width: 30%
+}
+.tim {
+    display: inline-block
+}
+.time {
+    background-color: rgba(193, 100, 230, 0.76);
+    border: solid  5px rgb(109, 63, 238);
+    width: 212px;
+    margin-left: calc(100% - 217px);
+}
+
