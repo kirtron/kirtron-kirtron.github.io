@@ -7,7 +7,7 @@ sendObj.addEventListener('click', function(){
     xhr.open('GET', '/private?user='+JSON.stringify(user), true)
     xhr.onreadystatechange = function() {
         if ( xhr.readyState != 4) return
-        alert(xhr.responseText)
+        
     }
     xhr.send()
 })

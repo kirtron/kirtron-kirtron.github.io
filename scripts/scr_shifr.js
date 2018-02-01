@@ -17,13 +17,7 @@ deshifr.addEventListener('click', function(e){
 })
 
 
-shifrs.addEventListener('click', function(e){
-    let str = ''
-    for (let i = myIns.value.length-1; i >= 0; --i ){
-        str += myIns.value[i]
-    }
-    myOuts.value = str
-})
+
 deshifrs.addEventListener('click', function(e){
     let str = ''
     for (let i = myIns.value.length-1; i >= 0; --i ){
@@ -189,8 +183,8 @@ deshifrsi.addEventListener('click', function(){
     
     let str = ''
     
-    let mas = [];
-    let kol, x=0, y=0;
+    let mas = new Array();
+    let kol, x=0, y=0, nepr=0;
     mas[0] = new Array()
     for (let r=0, kolvo=0; r <= myInsi.value.length; ++r){
     if (myInsi.value[r]==" "){
@@ -213,26 +207,46 @@ deshifrsi.addEventListener('click', function(){
         if (flag==false) break
     }
 
+    for (let i=0; i<myInsi.value.length; ++i){
+        if (myInsi.value[i] != " ") ++nepr
+    }
+
     kol=mas[0].length;
     
+let rq=1, flag=true
 
 str += mas[x][y];
-    while (y!=kol){
-
+    while (rq<nepr){
         str +=mas[x][++y];
+        ++rq;
+        if (rq>=nepr || flag==false) break
          while (y!=0){
             str += mas[++x][--y];
+            ++rq
+            if (rq>=nepr) {
+                flag=false
+                break
+                }
          }
+         if (rq>=nepr || flag==false) break
          str += mas[++x][y];
+         ++rq
+         if (rq>=nepr) break
+
          while (x!=0){
             str += mas[--x][++y];
+            ++rq
+            if (rq>=nepr) {
+                flag=false
+                break
+                }
          }
+         if (rq>=nepr || flag==false) break
     }
    
 
     myOutsi.value = str
 })
-
 
 function dec_to_dec(n){
     let sum=0;
@@ -383,7 +397,139 @@ deshifrh.addEventListener('click', function(){
 
 
 
+shifrsh.addEventListener('click', function(){
+    let str = '', kol=0, mas=new Array();
+    for (let i =0; i< myInsh.value.length; ++i){
+     ++kol
+    }
+    for (let i=0; i < myInsh.value.length/2 + 1; ++i){
+        mas[i]=new Array()
+    }
 
+    let x=0, y=0, ko=0, flagg=true
+    mas[x][y]=myInsh.value[ko++];
+
+while (ko<=kol){
+    mas[x][++y]=myInsh.value[ko++]
+   
+    if (ko>=kol || flagg==false) break
+     while (y!=0){
+        mas[++x][--y]=myInsh.value[ko++]
+      
+        if (ko>=kol) {
+            flagg=false
+            break
+            }
+     }
+     if (ko>=kol || flagg==false) break
+     mas[++x][y]=myInsh.value[ko++];
+     
+     if (ko>=kol) break
+
+     while (x!=0){
+        mas[--x][++y]=myInsh.value[ko++]
+        
+        if (ko>=kol) {
+            flagg=false
+            break
+            }
+     }
+     if (ko>kol || flagg==false) break
+}
+
+
+for (let i=0; i < myInsh.value.length/2 + 1; ++i){
+        for (let z=0; z<mas[i].length; ++z){
+            str += mas[i][z]
+        }
+    }
+    myOutsh.value = str
+})
+
+
+ 
+ deshifrsh.addEventListener('click', function(){
+    let str = '', kol=0, mas=new Array();
+    for (let i =0; i< myInsh.value.length; ++i){
+     ++kol
+    }
+    for (let i=0; i < myInsh.value.length/2 + 1; ++i){
+        mas[i]=new Array()
+    }
+let ko=1, flagg=true, x=0, y=0, itx
+mas[x][y]=ko;
+while (ko<kol){
+    mas[x][++y]=ko++
+   
+    if (ko>=kol || flagg==false) break
+     while (y!=0){
+        mas[++x][--y]=ko++
+      
+        if (ko>=kol) {
+            flagg=false
+            break
+            }
+     }
+     if (ko>=kol || flagg==false) break
+     mas[++x][y]=ko++;
+     itx=x
+     if (ko>=kol) break
+
+     while (x!=0){
+        mas[--x][++y]=ko++
+        
+        if (ko>=kol) {
+            flagg=false
+            break
+            }
+     }
+     if (ko>=kol || flagg==false) break
+}
+    
+    
+
+
+for (let i=0, q=0; i<=itx; ++i){
+    for (let z=0; z<mas[i].length; ++z){
+        mas[i][z]=myInsh.value[q++]
+    }
+}
+
+
+let rq=1, flag=true, nepr=myInsh.value.length
+x=y=0
+str += mas[x][y];
+    while (rq<nepr){
+        str +=mas[x][++y];
+        ++rq;
+        if (rq>=nepr || flag==false) break
+         while (y!=0){
+            str += mas[++x][--y];
+            ++rq
+            if (rq>=nepr) {
+                flag=false
+                break
+                }
+         }
+         if (rq>=nepr || flag==false) break
+         str += mas[++x][y];
+         ++rq
+         if (rq>=nepr) break
+
+         while (x!=0){
+            str += mas[--x][++y];
+            ++rq
+            if (rq>=nepr) {
+                flag=false
+                break
+                }
+         }
+         if (rq>=nepr || flag==false) break
+    }
+   
+
+    myOutsh.value = str
+})
 
 
 
