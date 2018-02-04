@@ -26,6 +26,14 @@ deshifrs.addEventListener('click', function(e){
     myOuts.value = str
 })
 
+shifrs.addEventListener('click', function(e){
+    let str = ''
+    for (let i = myIns.value.length-1; i >= 0; --i ){
+        str += myIns.value[i]
+    }
+    myOuts.value = str
+})
+
 
 
 shifrс.addEventListener('click', function(e){
