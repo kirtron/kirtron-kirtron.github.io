@@ -30,6 +30,7 @@ a {
 
 .buton{
     position: fixed;
+    
     top: 20px;
     transition: .5s;
 }

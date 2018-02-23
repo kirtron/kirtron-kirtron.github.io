@@ -540,7 +540,182 @@ str += mas[x][y];
 })
 
 
+function SHIF (mas1, rev){
+    let sad=""
+    let res=new Array()
+        for (let i=0; i<mas1.length; ++i){
+            let k=rev[i]
+            res[k]=mas1[i]
+    }
+    for (let i=0; i<mas1.length; ++i){
+    sad+=res[i]
+    }
+    return sad
+    }
+    
+        function BONE (max) {
+    let min=0
+        let totalNumbers 		= max - min + 1,
+            arrayTotalNumbers 	= [],
+            arrayRandomNumbers 	= [],
+            tempRandomNumber;
+    
+        while (totalNumbers--) {
+            arrayTotalNumbers.push(totalNumbers + min);
+        }
+    
+        while (arrayTotalNumbers.length) {
+            tempRandomNumber = Math.round(Math.random() * (arrayTotalNumbers.length - 1));
+            arrayRandomNumbers.push(arrayTotalNumbers[tempRandomNumber]);
+            arrayTotalNumbers.splice(tempRandomNumber, 1);
+        }
+    
+        return arrayRandomNumbers;
+    }
+    
+    
+    
+    
+        function XOR(mas1, mas2){
+            let arr=new Array()
+            if (mas1.length%2==1) arr+=mas1[0];
+            if (mas2.length%2==1) arr+=mas2[0];
+    
+            if (mas1.length%2==0 && mas2.length%2==0){
+            for (let i=0; i< parseInt((mas1.length+mas2.length)/2); ++i){
+             
+                if (mas1[i]==0 && mas2[i]==0 || mas1[i]==1 && mas2[i]==1) arr+="0"
+                else arr+="1"
+            }
+            }
+    
+            if (mas1.length%2==1 && mas2.length%2==0){
+            for (let i=0, k=1; i< parseInt((mas1.length+mas2.length)/2); ++i, ++k){
+                console.log(mas1[i], mas2[i])
+                if (mas1[k]==0 && mas2[i]==0 || mas1[k]==1 && mas2[i]==1) arr+="0"
+                else arr+="1"
+            }
+            }
+    
+            if (mas1.length%2==0 && mas2.length%2==1){
+            for (let i=0, k=1; i< parseInt((mas1.length+mas2.length)/2); ++i, ++k){
+                if (mas1[i]==mas2[k]==0 || mas1[i]==mas2[k]==1) arr+="0"
+                else arr+="1"
+            }
+            }
+            return arr
+        }
+    
+    function RELISE(mas1, mas2){
+         let rev=new Array()
+    rev=BONE(mas1.length-1)
+    console.log(rev)
+    mas1=SHIF(mas1, rev)
+    
+   let  arr = XOR(mas1, mas2)
+    
+    return arr
+    }
+    
+        shifrhf.addEventListener('click', function(){
+    let rrrr=BONE(myInhf.value.length-1)
+    console.log(rrrr)
+    let ssd=new Array()
+    let k=myInhf.value.length
+    
+    for (let i=0; i<k; ++i){
+    ssd[i] = myInhf.value[i]
+    }
+    myInhf.value = SHIF(ssd, rrrr)
 
+    
+        
+    let str=""
+    
+    let mas1, mas2, arr;
+    mas1=new Array()
+    mas2=new Array()
+    arr=new Array()
+    for (let i=0, k=0; i<myInhf.value.length; ++i){
+       if ( i < parseInt(myInhf.value.length/2) + myInhf.value.length%2) mas1[i]=myInhf.value[i]
+       else mas2[k++]=myInhf.value[i]
+        
+    }
+    
+    while (str.length + myInhf.value.length/2 <=myInhf.value.length){
+    arr=RELISE(mas1, mas2)
+    mas2=mas1
+    mas1=arr
+    str+=arr
+    }
+    myOuthf.value=str
+    })
+    
+    function DERELISE(mas1, mas2, rev){
+    
+    mas1=SHIF(mas1, rev)
+    
+    arr = XOR(mas1, mas2)
+    
+    return arr
+    }
+    
+    
+    
+    function DESHIFIT (mas1, rev){
+    let sad=""
+    let res=new Array()
+        for (let i=0; i<mas1.length; ++i){
+            let k=rev[i]
+            res[i]=mas1[k]
+    }
+    for (let i=0; i<mas1.length; ++i){
+    sad+=res[i]
+    }
+    return sad
+    }
+    
+    
+    deshifrhf.addEventListener('click', function(){
+        
+    let str=""
+    
+    let mas1, mas2, arr;
+    mas1=new Array()
+    mas2=new Array()
+    arr=new Array()
+    for (let i=0, k=0; i<myInhf.value.length; ++i){
+       if ( i < parseInt(myInhf.value.length/2) + myInhf.value.length%2) mas1[i]=myInhf.value[i]
+       else mas2[k++]=myInhf.value[i]
+        
+    }
+    
+    while (str.length + myInhf.value.length/2 <=myInhf.value.length){
+    
+    let pass=prompt("Введите ключ")
+    pass=pass.split(/\s+/)
+    console.log(pass)
+    arr=DERELISE(mas1, mas2, pass)
+    mas2=mas1
+    mas1=arr
+    str+=arr
+    }
+    
+    
+     let rrrr=prompt("Введите ключ")
+     rrrr=rrrr.split(/\s+/)
+    let ssd=new Array()
+    let k=str.length
+    
+    for (let i=0; i<k; ++i){
+    ssd[i] = str[i]
+    }
+    myOuthf.value = DESHIFIT(ssd, rrrr)
+    
+    
+
+    
+    })
 
 
 
