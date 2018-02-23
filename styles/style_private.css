@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Play');
 html {
-    background: url('/files/ДИИКООН.png');
+    background: url('/files/anon.jpg') no-repeat center center fixed;
+   
     font-family: 'Play', sans-serif;
     background-attachment: fixed
 }
@@ -15,8 +16,8 @@ body, button {
     display: inline-block
 }
 .time {
-    background-color: rgba(193, 100, 230, 0.76);
-    border: solid  5px rgb(109, 63, 238);
+    background-color: rgba(172, 170, 173, 0.76);
+    border: solid  5px rgb(63, 62, 65);
     width: 212px;
     margin-left: calc(100% - 217px);
 }
