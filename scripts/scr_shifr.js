@@ -1,4 +1,76 @@
 'use strict'
+
+
+function SHIF (mas1, os1){
+    let dec_shis=0
+    for (let i=0; i<mas1.length; ++i){
+     
+    
+    if (mas1[i]=='A') dec_shis+=10*Math.pow(os1, (-i+mas1.length-1))
+    else
+    if (mas1[i]=='B') dec_shis+=11*Math.pow(os1, (-i+mas1.length-1))
+    else
+    if (mas1[i]=='C') dec_shis+=12*Math.pow(os1, (-i+mas1.length-1))
+    else
+    if (mas1[i]=='D') dec_shis+=13*Math.pow(os1, (-i+mas1.length-1))
+    else
+    if (mas1[i]=='E') dec_shis+=14*Math.pow(os1, (-i+mas1.length-1))
+    else
+    if (mas1[i]=='F') dec_shis+=15*Math.pow(os1, (-i+mas1.length-1))
+    else dec_shis+=mas1[i]*Math.pow(os1, (-i+mas1.length-1))
+    }
+    console.log(dec_shis)
+    return dec_shis
+}
+
+let res=""
+
+function loop(mas, os2){
+    if (mas>=os2 ) loop(parseInt(mas/os2), os2)
+    if (mas%os2 < 10) res+=mas%os2
+    else
+    if (mas%os2==10) res+="A"
+    else
+    if (mas%os2==11) res+="B"
+    else
+    if (mas%os2==12) res+="C"
+    else
+    if (mas%os2==13) res+="D"
+    else
+    if (mas%os2==14) res+="E"
+    else
+    if (mas%os2==15) res+="F"
+    console.log(mas%os2, res)
+}
+
+function Decode(mas, os2, os1){
+    let  k= parseInt(SHIF(mas, os1))
+    console.log(k)
+    loop(k, os2, res)
+    console.log(res)
+    return res
+}
+
+
+    konv.addEventListener('click', function(){
+    let flag=true
+    let os1=parseInt(num1.value)
+let os2=parseInt(num2.value)
+    for (let i=0; i<myInkon.value.length; ++i){
+    if (myInkon.value[i]>=os1) {
+    flag=false
+    alert("Неверные Данные!")
+    }
+    }
+    if (flag==true){
+
+
+myOutkon.value=Decode(myInkon.value,os2, os1)
+res=""
+}
+})
+
+
 shifr.addEventListener('click', function(e){
     let str = ''
     for (let i = 0; i < myIn.value.length; i++ ){
@@ -711,14 +783,46 @@ function SHIF (mas1, rev){
     ssd[i] = str[i]
     }
     myOuthf.value = DESHIFIT(ssd, rrrr)
-    
-    
+     })
 
-    
+     shifrbi.addEventListener('click', function(){
+        
+            
+        let str=""
+        let str2=""
+        let w=0
+        for (let i=0, k=0; i<myInhf.value.length; ++i){
+            
+           if ( myInbi.value[i]!=" ") str+=myInhf.value[i]
+           if (str.length == 4){
+               ++w
+               if (parseInt(str)==0) str2+="0"
+               if (parseInt(str)==1) str2+="1"
+               if (parseInt(str)==10) str2+="2"
+               if (parseInt(str)==11) str2+="3"
+               if (parseInt(str)==100) str2+="4"
+               if (parseInt(str)==101) str2+="5"
+               if (parseInt(str)==110) str2+="6"
+               if (parseInt(str)==111) str2+="7"
+               if (parseInt(str)==1000) str2+="8"
+               if (parseInt(str)==1001) str2+="9"
+               if (parseInt(str)==1010) str2+="A"
+               if (parseInt(str)==1011) str2+="B"
+               if (parseInt(str)==1100) str2+="C"
+               if (parseInt(str)==1101) str2+="D"
+               if (parseInt(str)==1110) str2+="E"
+               if (parseInt(str)==1111) str2+="F"
+               
+               str=""
+           if (w==2) {
+               str2+=" "
+               w=0
+            }
+           }
+           
+        }
+        myOutbi.value=str2
     })
-
-
-
 
 
 
