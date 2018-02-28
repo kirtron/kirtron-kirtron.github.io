@@ -21,4 +21,6 @@ body, button {
     width: 212px;
     margin-left: calc(100% - 217px);
 }
-
+.as1 {
+    color: white
+}

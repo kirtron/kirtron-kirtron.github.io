@@ -28,6 +28,18 @@ Stext.addEventListener('click', function(){
     xhr.send()
 })
 
+beconom.addEventListener('click', function(){
+    let xhr = new XMLHttpRequest()
+    xhr.open('GET', '/JS_pr/econom', true)
+    xhr.onreadystatechange = function() {
+        if ( xhr.readyState != 4) return
+        content.innerHTML=xhr.responseText
+        let script = document.createElement('script')
+        script.src="/scripts/scr_econom.js"
+        content.appendChild(script)
+    }
+    xhr.send()
+})
 
 life.addEventListener('click', function(){
     let xhr = new XMLHttpRequest()

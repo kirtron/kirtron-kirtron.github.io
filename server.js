@@ -11,16 +11,10 @@ function answer(req,res){
     let path = url.parse(req.url, true).pathname
     let urlObj = url.parse(req.url, true)
     
-    if (path == '/JS_pr/shifrovanie'){
+    if (path == '/JS_pr/shifrovanie' || path == '/JS_pr/econom' || path == '/JS_pr/ip_calc' || path == '/JS_pr/life_avt' || path == '/JS_pr/map'){
         file.serve(req,res)
     }
-
-    if (path == '/JS_pr/life_avt'){
-        file.serve(req,res)
-    }
-    if (path == '/JS_pr/map'){
-        file.serve(req,res)
-    }
+ 
 
     if (path == '/private'){
         let user = JSON.parse(urlObj.query.user)
@@ -42,9 +36,7 @@ function answer(req,res){
        res.end(data);
     }
 
-    if (path == '/JS_pr/ip_calc'){
-        file.serve(req,res)
-     }
+  
 
     if (path == '/delete'){
         fs.writeFile("file.doc", "")
@@ -58,7 +50,7 @@ function answer(req,res){
     }
 
 }
-http.createServer(answer).listen(8080)
+http.createServer(answer).listen(8085)
 
 
 
