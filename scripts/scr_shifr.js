@@ -1,6 +1,7 @@
 'use strict'
 
 
+konv.addEventListener('click', function(){
 function SHIF (mas1, os1){
     let dec_shis=0
     for (let i=0; i<mas1.length; ++i){
@@ -52,7 +53,6 @@ function Decode(mas, os2, os1){
 }
 
 
-    konv.addEventListener('click', function(){
     let flag=true
     let os1=parseInt(num1.value)
 let os2=parseInt(num2.value)
@@ -791,9 +791,9 @@ function SHIF (mas1, rev){
         let str=""
         let str2=""
         let w=0
-        for (let i=0, k=0; i<myInhf.value.length; ++i){
+        for (let i=0, k=0; i<myInbi.value.length; ++i){
             
-           if ( myInbi.value[i]!=" ") str+=myInhf.value[i]
+           if ( myInbi.value[i]!=" ") str+=myInbi.value[i]
            if (str.length == 4){
                ++w
                if (parseInt(str)==0) str2+="0"
