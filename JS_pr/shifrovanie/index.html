@@ -25,36 +25,36 @@
  <div  class="as1"><p> "Перевод из bin в 16"</p></div>
  <button id="shifrbi">Зашифровать</button>
 <button id="deshifrbi">Дешифровать</button>
-<input id="myInbi">
+<input id="myInbi" placeholder="Введите текст">
 <input id="myOutbi">
 <br>
  
   <div  class="as1"><p> Кодировка - "Цезарь"</p></div>
     <button id="shifr">Зашифровать</button>
 <button id="deshifr">Дешифровать</button>
-<input id="myIn">
+<input id="myIn" placeholder="Введите текст">
 <input id="myOut">
 <br>
 <div  class="as1"><p> Кодировка - "Сникерс"</p></div>
 <button id="shifrs">Зашифровать</button>
 <button id="deshifrs">Дешифровать</button>
-<input id="myIns">
+<input id="myIns" placeholder="Введите текст">
 <input id="myOuts">
 <br>
 <div  class="as1"><p> Кодировка - "Смена 2-х"</p></div>
 <button id="shifrс">Зашифровать</button>
 <button id="deshifrс">Дешифровать</button>
-<input id="myInс">
+<input id="myInс" placeholder="Введите текст">
 <input id="myOutс">
 <br>
 <div  class="as1"><p> Кодировка - "Сибирский"</p></div>
 
 <button id="deshifrsi">Дешифровать</button>
-<input id="myInsi">
+<input id="myInsi" placeholder="Введите текст">
 <input id="myOutsi">
 <br>
 <div  class="as1"><p> Кодировка - "Сибирский Хардъ"</p></div>
-<button id="shifrsh">Зашифровать</button>
+<button id="shifrsh" placeholder="Введите текст">Зашифровать</button>
 <button id="deshifrsh">Дешифровать</button>
 <input id="myInsh">
 <input id="myOutsh">
@@ -62,26 +62,36 @@
 <div  class="as1"><p> Кодировка - "Гамма код Элиаса"</p></div>
 <button id="shifra">Зашифровать</button>
 <button id="deshifra">Дешифровать</button>
-<input id="myIna">
+<input id="myIna"  placeholder="bin">
 <input id="myOuta">
 <br>
 <div  class="as1"><p> Кодировка - "Помехо-устойчивое кодирование Хемминга 15/11"</p></div>
 <button id="shifrh">Зашифровать</button>
 <button id="deshifrh">Дешифровать</button>
-<input id="myInh">
+<input id="myInh"  placeholder="bin">
 <input id="myOuth">
 <br>
 
 <div  class="as1"><p> ХЭШ - "Сеть Фейстеля"</p></div>
   <button id="shifrhf">Зашифровать</button>
 <button id="deshifrhf">Дешифровать</button>
-<input id="myInhf">
+<input id="myInhf" placeholder="bin">
 <input id="myOuthf">
 <br>
+
+<p>Алгоритм Диффи-Хеллмана</p></div>
+
+  <button id="rasdhell">Расчитать</button>
+
+<input id="myIndhell" placeholder="исходные,свое и полученное число">
+
+<input id="myOutdhell">
+<br>
+
 <div  class="as1"><p> Кодировка - "Морзе"</p>
     <form id="morze" name="morze">
         
-       <p><input type="radio" name="napravlenie" id="text2morze" tabindex="1" checked=""> <label for="text2morze" title="Русские и латинские буквы можно вводить в любом регистре (и большие и маленькие). Также поддерживаются цифры, знаки пунктуации и специальные символы: . , : ; ( ) ' ” — / ? ! = @ &amp; + _ $">Текст в код Морзе </label><br>
+       <p><input placeholder="Введите текст" type="radio" name="napravlenie" id="text2morze" tabindex="1" checked=""> <label for="text2morze" title="Русские и латинские буквы можно вводить в любом регистре (и большие и маленькие). Также поддерживаются цифры, знаки пунктуации и специальные символы: . , : ; ( ) ' ” — / ? ! = @ &amp; + _ $">Текст в код Морзе </label><br>
        
        <input type="radio" name="napravlenie" id="morze2rus" tabindex="2"> <label for="morze2rus" title="Точки можно вводить вводите символом точки, запятой, плюсом или знаком умножения (. , + *) Тире минусом (дефисом). Буквы разделяйте одним пробелом, а слова - двумя пробелами.">Код Морзе в кириллицу </label><br>
        

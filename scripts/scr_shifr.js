@@ -824,7 +824,22 @@ function SHIF (mas1, rev){
         myOutbi.value=str2
     })
 
-
+    function DEF(a, b, x){
+        return Math.pow(a, x) % b
+    }
+    
+    
+        rasdhell.addEventListener('click', function(){
+        let a, b, my, send, ans;
+        let mas=myIndhell.value.split(/\s+/)
+        a=mas[0]
+        b=mas[1]
+        my=mas[2]
+        send=mas[3]
+        ans=DEF(a, b, my)
+        let Key=DEF(send,b ,my)
+    myOutdhell.value="answer: " + ans +" key: " + Key
+    })
 
 
 
