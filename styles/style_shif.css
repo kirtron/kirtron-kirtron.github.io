@@ -5,3 +5,9 @@ body, button {
 .as1 {
     color: white
 }
+
+.box {
+    background: rgba(100, 98, 105, 0.37) ;
+    border: solid  3.5px rgb(70, 64, 83);
+    margin-top: 9px
+}

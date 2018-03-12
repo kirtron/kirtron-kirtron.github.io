@@ -13,99 +13,114 @@
 <div class="as1">
  <h1>Шифрование</h1>
  <div class="as1"><h2>Перед вами сервис для шифрование.</h2></div>
+
+<div class="box">
  <div class="as1" > <p>Конвертирование между СС</p></div>
- 
    <button id="konv">Конвертировать</button>
- 
  <input id="myInkon" placeholder="Введите число">
  <input id="num1" placeholder="основание СС исходника">
  <input id="num2" placeholder="основание СС конвертированного">
  <input id="myOutkon">
+</div>
 
+<div class="box">
  <div  class="as1"><p> "Перевод из bin в 16"</p></div>
  <button id="shifrbi">Зашифровать</button>
 <button id="deshifrbi">Дешифровать</button>
 <input id="myInbi" placeholder="Введите текст">
 <input id="myOutbi">
-<br>
+</div>
+
  
+<div class="box">
   <div  class="as1"><p> Кодировка - "Цезарь"</p></div>
     <button id="shifr">Зашифровать</button>
 <button id="deshifr">Дешифровать</button>
 <input id="myIn" placeholder="Введите текст">
 <input id="myOut">
-<br>
+</div>
+
+
+
+<div class="box">
 <div  class="as1"><p> Кодировка - "Сникерс"</p></div>
 <button id="shifrs">Зашифровать</button>
 <button id="deshifrs">Дешифровать</button>
 <input id="myIns" placeholder="Введите текст">
 <input id="myOuts">
-<br>
+</div>
+
+
+<div class="box">
 <div  class="as1"><p> Кодировка - "Смена 2-х"</p></div>
 <button id="shifrс">Зашифровать</button>
 <button id="deshifrс">Дешифровать</button>
 <input id="myInс" placeholder="Введите текст">
 <input id="myOutс">
-<br>
-<div  class="as1"><p> Кодировка - "Сибирский"</p></div>
+</div>
 
+<div class="box">
+<div  class="as1"><p> Кодировка - "Сибирский"</p></div>
 <button id="deshifrsi">Дешифровать</button>
 <input id="myInsi" placeholder="Введите текст">
 <input id="myOutsi">
-<br>
+</div>
+
+
+<div class="box">
 <div  class="as1"><p> Кодировка - "Сибирский Хардъ"</p></div>
 <button id="shifrsh" placeholder="Введите текст">Зашифровать</button>
 <button id="deshifrsh">Дешифровать</button>
 <input id="myInsh">
 <input id="myOutsh">
-<br>
+</div>
+
+<div class="box">
 <div  class="as1"><p> Кодировка - "Гамма код Элиаса"</p></div>
 <button id="shifra">Зашифровать</button>
 <button id="deshifra">Дешифровать</button>
 <input id="myIna"  placeholder="bin">
 <input id="myOuta">
-<br>
+</div>
+
+<div class="box">
 <div  class="as1"><p> Кодировка - "Помехо-устойчивое кодирование Хемминга 15/11"</p></div>
 <button id="shifrh">Зашифровать</button>
 <button id="deshifrh">Дешифровать</button>
 <input id="myInh"  placeholder="bin">
 <input id="myOuth">
-<br>
+</div>
 
+
+<div class="box">
 <div  class="as1"><p> ХЭШ - "Сеть Фейстеля"</p></div>
   <button id="shifrhf">Зашифровать</button>
 <button id="deshifrhf">Дешифровать</button>
 <input id="myInhf" placeholder="bin">
 <input id="myOuthf">
-<br>
+</div>
 
-<p>Алгоритм Диффи-Хеллмана</p></div>
 
+<div class="box">
+  <div  class="as1"><p>Алгоритм Диффи-Хеллмана</p></div>
   <button id="rasdhell">Расчитать</button>
-
 <input id="myIndhell" placeholder="исходные,свое и полученное число">
-
 <input id="myOutdhell">
-<br>
+</div>
 
-<div  class="as1"><p> Кодировка - "Морзе"</p>
+
+<div class="box"> 
+<div  class="as1"><p> Кодировка - "Морзе"</p></div>
     <form id="morze" name="morze">
         
        <p><input placeholder="Введите текст" type="radio" name="napravlenie" id="text2morze" tabindex="1" checked=""> <label for="text2morze" title="Русские и латинские буквы можно вводить в любом регистре (и большие и маленькие). Также поддерживаются цифры, знаки пунктуации и специальные символы: . , : ; ( ) ' ” — / ? ! = @ &amp; + _ $">Текст в код Морзе </label><br>
-       
        <input type="radio" name="napravlenie" id="morze2rus" tabindex="2"> <label for="morze2rus" title="Точки можно вводить вводите символом точки, запятой, плюсом или знаком умножения (. , + *) Тире минусом (дефисом). Буквы разделяйте одним пробелом, а слова - двумя пробелами.">Код Морзе в кириллицу </label><br>
-       
        <input type="radio" name="napravlenie" id="morze2lat" tabindex="3"> <label for="morze2lat" title="Точки можно вводить вводите символом точки, запятой, плюсом или знаком умножения (. , + *) Тире минусом (дефисом). Буквы разделяйте одним пробелом, а слова - двумя пробелами.">Код Морзе в латиницу </label></p>
-   
-       
-       <textarea  rows="3" cols="62" name="input_text" id="input_text" tabindex="4" autofocus=""></textarea></p>
-       
-       
+       <textarea  rows="3" cols="62" name="input_text" id="input_text" tabindex="4" autofocus=""></textarea></p> 
        <textarea rows="4" cols="62" name="output_text" id="output_text" tabindex="5" readonly=""></textarea></p>
-       
        <div><input type="button" value="Конвертировать" tabindex="6" onclick="convert()"></div>
        </form>
-   
+      </div>
 
     </body>
 </html> 
