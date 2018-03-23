@@ -1,6 +1,3 @@
-/*-------------------------
-	Simple reset
---------------------------*/
 
 
 *{
@@ -9,9 +6,7 @@
 }
 
 
-/*-------------------------
-	General Styles
---------------------------*/
+
 
 
 html{
@@ -32,9 +27,7 @@ section, footer, header, aside{
 }
 
 
-/*-------------------------
-	The main page elements
---------------------------*/
+
 
 
 body{
@@ -42,7 +35,6 @@ body{
 	color: #fff;
 	width:100%;
 	height:100%;
-	/*	position:absolute;*/
 	overflow:hidden;
 }
 
@@ -56,7 +48,7 @@ body{
 	transition:top 0.4s;
 }
 
-#stage > div{  /* The step divs */
+#stage > div{ 
 	height:100%;
 	position:relative;
 }
@@ -109,9 +101,7 @@ a.back:hover{
 }
 
 
-/*-------------------------
-	Conditional classes
---------------------------*/
+
 
 
 [class*="if-"]{
@@ -127,9 +117,6 @@ body.decrypt .if-decrypt{
 }
 
 
-/*-------------------------
-	Button styles
---------------------------*/
 
 
 .button{
@@ -180,7 +167,6 @@ body.decrypt .if-decrypt{
 	background-color: #c15645;
 }
 
-/* Styles for specific buttons */
 
 .button.browse{
 	width:180px;
@@ -215,9 +201,6 @@ body.decrypt .if-decrypt{
 }
 
 
-/*-------------------------
-	The steps
---------------------------*/
 
 
 #step1{
@@ -262,9 +245,7 @@ body.decrypt #step2{
 #step4 .content{	margin-top: -100px;}
 
 
-/*----------------------------
-	The Demo Footer
------------------------------*/
+
 
 
 footer{
