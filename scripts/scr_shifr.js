@@ -842,7 +842,30 @@ function SHIF (mas1, rev){
     })
 
 
-
+    rec_otl.addEventListener('click', function(){
+        let p, q, n, f, d, e=2
+        let masi=rec_otladka.value.split(/\s+/)
+        p=masi[0]
+        q=masi[1]
+        n = p*q
+        f = (p-1)*(q-1)
+        d=f+1  //взаимно простое, можно заменить метод
+        for (; (e*d)%f != 1; ++e){}
+        res_otladka.value = "n = " + n + " d = " + d + " e = " + e
+    })
+    
+    function DEF2(a, b, x){
+        return Math.pow(a, x) % b
+    }
+        shifash.addEventListener('click', function(){
+        let protected_key, key, message;
+        let mas=myInash.value.split(/\s+/)
+        message=mas[0]
+        key=mas[1]
+        protected_key=mas[2]
+    
+    myOutash.value=DEF2(message, protected_key, key);
+    })
 
 
 
