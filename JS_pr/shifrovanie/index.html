@@ -12,16 +12,16 @@
 <body>
 <div class="as1">
  <h1>Шифрование</h1>
- <div class="as1"><h2>Перед вами сервис для шифрование.</h2></div>
+ <div class="as1"><h2>Перед вами сервис для шифрования.</h2></div>
 
-<div class="box">
- <div class="as1" > <p>Конвертирование между СС</p></div>
-   <button id="konv">Конвертировать</button>
- <input id="myInkon" placeholder="Введите число">
- <input id="num1" placeholder="основание СС исходника">
- <input id="num2" placeholder="основание СС конвертированного">
+ <div class="box">
+  <div  class="as1"><p> "Конвертирование между системами счисления"</p></div>
+  <button id="konv">Конвертировать</button>
+  <input id="myInkon" placeholder="Введите число">
+ <input id="num1" placeholder="СС исходного">
+ <input id="num2" placeholder="СС полученного">
  <input id="myOutkon">
-</div>
+ </div>
 
 <div class="box">
  <div  class="as1"><p> "Перевод из bin в 16"</p></div>
@@ -121,6 +121,22 @@
        <div><input type="button" value="Конвертировать" tabindex="6" onclick="convert()"></div>
        </form>
       </div>
+
+      <div class="box">
+        <div  class="as1"> <p>Отладка ключей </p></div>
+        <button id="rec_otl">отладить</button>
+        <input id="rec_otladka" placeholder="2 простых числа">
+        <input id="res_otladka">
+        <br>
+        <div  class="as1"><p>Ассиметричное шифрование</p></div>
+        
+          <button id="shifash">Зашифровать</button>
+          <button id="deshifash">Дешифровать</button>
+        
+        <input id="myInash" placeholder="message publ/prived prot">
+        
+        <input id="myOutash">
+       </div>
 
     </body>
 </html> 
